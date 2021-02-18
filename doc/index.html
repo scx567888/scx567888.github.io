@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scx Doc</title>
+</head>
+<body>
+<img src="../img/scx-logo.svg" style="width: 300px"/>
+<img src="../img/scx-ui-logo.svg" style="width: 300px"/>
+<h1>文档页面</h1>
+<textarea style="width: 80%;height: 400px;border: 1px solid red">
+JAVA_HOME=C:\Apps\jdk
+
+DOTNET_ROOT=C:\Apps\dotnet
+
+JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8 -Duser.language=zh
+
+NODE_HOME=C:\Apps\node
+
+NUGET_PACKAGES=C:\Apps\.apps\.nuget
+
+Path=
+	 %USERPROFILE%\AppData\Local\Microsoft\WindowsApps
+	 %JAVA_HOME%\bin
+	 %DOTNET_ROOT%
+	 %NODE_HOME%
+	 C:\Apps\ideaIU\plugins\maven\lib\maven3\bin
+	 C:\Apps\mysql\bin
+	 C:\Apps\git\cmd
+	 C:\Apps\7z
+	 C:\Apps\npp
+
+修改 windows 字符集 先开启全球化 utf8
+若cmd 没有变过来  删除 计算机\HKEY_CURRENT_USER\Console\%SystemRoot%_system32_cmd.exe	 下的 CodePage 项
+关闭 windows10 保留空间 DISM.exe /Online /Set-ReservedStorageState /State:Disabled
+
+台式机调节亮度 https://github.com/emoacht/Monitorian/releases/tag/2.6.0-Executables
+清理 windows 更新 dism /online /Cleanup-Image /StartComponentCleanup /ResetBase
+</textarea>
+</body>
+</html>
