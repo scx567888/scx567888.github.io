@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clip-path And shape-outside 练习</title>
+    <style>
+        .main {
+            width: 500px;
+        }
+
+        body {
+            background: #e0f6ff;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            animation: 4s trans infinite alternate ease-in-out;
+            transform-origin: center;
+            float: left;
+        }
+
+        @keyframes trans {
+            from {
+                background: #ff7f5a;
+                clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+                shape-outside: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+            }
+            to {
+                background: #4276b9;
+                clip-path: polygon(50% 30%, 100% 0%, 70% 50%, 100% 100%, 50% 70%, 0% 100%, 30% 50%, 0% 0%);
+                shape-outside: polygon(50% 30%, 100% 0%, 70% 50%, 100% 100%, 50% 70%, 0% 100%, 30% 50%, 0% 0%);
+            }
+        }
+
+        .some-text {
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="box"></div>
+    <p class="some-text"></p>
+</div>
+<script>
+    //填充默认数据
+    document.querySelector(".some-text").innerHTML = Array(600).fill(0).join("");
+</script>
+</body>
+</html>
