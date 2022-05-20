@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>clip-path And shape-outside 练习</title>
     <style>
         .main {
@@ -21,13 +22,22 @@
         }
 
         @keyframes trans {
-            from {
-                background: #ff7f5a;
+            0% {
+                background: #ef1919;
                 clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
                 shape-outside: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
             }
-            to {
-                background: #4276b9;
+            25% {
+                background: #ff6f00;
+            }
+            50% {
+                background: #00a6ff;
+            }
+            75% {
+                background: #84ff00;
+            }
+            100% {
+                background: #9252f6;
                 clip-path: polygon(50% 30%, 100% 0%, 70% 50%, 100% 100%, 50% 70%, 0% 100%, 30% 50%, 0% 0%);
                 shape-outside: polygon(50% 30%, 100% 0%, 70% 50%, 100% 100%, 50% 70%, 0% 100%, 30% 50%, 0% 0%);
             }
