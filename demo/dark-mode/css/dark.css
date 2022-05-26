@@ -1,0 +1,14 @@
+/*显式设置为黑暗模式或遵循系统时使用 黑暗模式*/
+:root[theme='dark'] {
+    --scx-app_theme: rgb(72, 147, 73);
+    --scx-app_bg: #2b2b2b;
+    --scx-app_color: whitesmoke;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --scx-app_theme: rgb(72, 147, 73);
+        --scx-app_bg: #2b2b2b;
+        --scx-app_color: whitesmoke;
+    }
+}
