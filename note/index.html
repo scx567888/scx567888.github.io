@@ -26,10 +26,16 @@
 	2,关闭 explorer 进程
 	3,删除 IconStreams PastIconsStream 项
 	4,启动 explorer 进程
+
 多系统切换回 旧版 启动菜单
 	bcdedit /set "{default}" bootmenupolicy legacy
+
 多系统切换回 Metro版 启动菜单
 	bcdedit /set "{default}" bootmenupolicy standard
+
+使用 jdk 自带 keytool 生成证书
+        keytool -genkeypair -keyalg RSA -keystore my_keystore.jks
+
 </textarea>
 <h3>环境变量(自用)</h3>
 <textarea style="width: 80%;height: 300px;border: 1px solid #348900">
