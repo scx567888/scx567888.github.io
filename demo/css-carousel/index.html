@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>纯 CSS 实现轮播效果</title>
+    <style>
+
+        /* 最外层包装容器, 用来隐藏滚动条 */
+        .carousel-wrapper {
+            overflow: hidden;
+        }
+
+        /* 滚动动画 不停向左滚动 滚动到一半 */
+        @keyframes carousel-slide {
+            0% {
+                transform: translateX(0%)
+            }
+            100% {
+                transform: translateX(-50%)
+            }
+        }
+
+        /* 滚动容器 */
+        .carousel {
+            display: flex;
+            /* 宽度需要设置为实际滚动内容的两倍 */
+            width: 200%;
+            /* 动画 这里 5秒 一循环 */
+            animation: carousel-slide 5s infinite linear;
+            /* 间距 需要和 .carousel .carousel-half 的间距一致 */
+            column-gap: 10px;
+        }
+
+        /* 鼠标移入时暂停滚动动画 */
+        .carousel:hover {
+            /* 暂停动画 */
+            animation-play-state: paused;
+        }
+
+        .carousel .carousel-half {
+            display: flex;
+            /* 这里的宽度需要占满可视区域 否则会出现空缺 */
+            width: 100%;
+            /* 间距 需要和 .carousel 的间距保持一致 */
+            column-gap: 10px;
+        }
+
+        /* 元素本体 这里的样式可以随便写 */
+        .carousel .carousel-item {
+            display: flex;
+            flex: 1;
+            transition: all 150ms ease-in-out;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            border: 5px solid #28be00;
+            background: green;
+            color: white;
+        }
+
+        /* hover 时我们改变一下颜色 */
+        .carousel .carousel-item:hover {
+            border: 5px solid #00b8be;
+            background: #004b80;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="carousel-wrapper">
+
+    <div class="carousel">
+
+        <div class="carousel-half">
+            <div class="carousel-item">
+                <h1>1</h1>
+            </div>
+
+            <div class="carousel-item">
+                <h1>2</h1>
+            </div>
+
+            <div class="carousel-item">
+                <h1>3</h1>
+            </div>
+
+            <div class="carousel-item">
+                <h1>4</h1>
+            </div>
+
+            <div class="carousel-item">
+                <h1>5</h1>
+            </div>
+
+            <div class="carousel-item">
+                <h1>6</h1>
+            </div>
+
+            <div class="carousel-item">
+                <h1>7</h1>
+            </div>
+
+        </div>
+
+        <!--  todo 不想复制 html 的话可以看一下下面的 js 脚本 -->
+
+        <!--        <div class="carousel-half">-->
+        <!--            <div class="carousel-item">-->
+        <!--                <h1>1</h1>-->
+        <!--            </div>-->
+
+        <!--            <div class="carousel-item">-->
+        <!--                <h1>2</h1>-->
+        <!--            </div>-->
+
+        <!--            <div class="carousel-item">-->
+        <!--                <h1>3</h1>-->
+        <!--            </div>-->
+
+        <!--            <div class="carousel-item">-->
+        <!--                <h1>4</h1>-->
+        <!--            </div>-->
+
+        <!--            <div class="carousel-item">-->
+        <!--                <h1>5</h1>-->
+        <!--            </div>-->
+
+        <!--            <div class="carousel-item">-->
+        <!--                <h1>6</h1>-->
+        <!--            </div>-->
+
+        <!--            <div class="carousel-item">-->
+        <!--                <h1>7</h1>-->
+        <!--            </div>-->
+
+        <!--        </div>-->
+
+    </div>
+</div>
+<script>
+    // 这里如果不想再手动复制一份 滚动内容 的 html 代码的话, 可以对 滚动内容 进行克隆
+    window.addEventListener("load", () => {
+        document.querySelector(".carousel").appendChild(document.querySelector(".carousel-half").cloneNode(true));
+    });
+</script>
+</body>
+</html>
