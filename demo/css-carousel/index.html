@@ -57,7 +57,9 @@
 
         /* 鼠标移入时暂停滚动动画 */
         .carousel:hover,
-        .carousel-reverse:hover {
+        .carousel-reverse:hover,
+        .carousel.active,
+        .carousel-reverse.active {
             /* 暂停动画 */
             animation-play-state: paused;
         }
@@ -271,11 +273,26 @@
         const carouselElementList = document.querySelectorAll(".carousel");
         for (let o of carouselElementList) {
             o.appendChild(o.querySelector(".carousel-half").cloneNode(true));
+            o.addEventListener("click", (e) => {
+                if (o.classList.contains("active")) {
+                    o.classList.remove("active");
+                } else {
+                    o.classList.add("active");
+                }
+            });
         }
         const carouselReverseElementList = document.querySelectorAll(".carousel-reverse");
         for (let o of carouselReverseElementList) {
             o.appendChild(o.querySelector(".carousel-half").cloneNode(true));
+            o.addEventListener("click", (e) => {
+                if (o.classList.contains("active")) {
+                    o.classList.remove("active");
+                } else {
+                    o.classList.add("active");
+                }
+            });
         }
+
     });
 </script>
 </body>
