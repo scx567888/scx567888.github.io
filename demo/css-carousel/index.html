@@ -273,28 +273,37 @@
         const carouselElementList = document.querySelectorAll(".carousel");
         for (let o of carouselElementList) {
             o.appendChild(o.querySelector(".carousel-half").cloneNode(true));
+
             const changeClass = (e) => {
+
                 if (o.classList.contains("active")) {
                     o.classList.remove("active");
                 } else {
                     o.classList.add("active");
                 }
+
             }
             o.addEventListener("click", changeClass);
             o.addEventListener("touchstart", changeClass);
+            });
         }
         const carouselReverseElementList = document.querySelectorAll(".carousel-reverse");
         for (let o of carouselReverseElementList) {
             o.appendChild(o.querySelector(".carousel-half").cloneNode(true));
+
             const changeClass = (e) => {
+            
                 if (o.classList.contains("active")) {
                     o.classList.remove("active");
                 } else {
                     o.classList.add("active");
                 }
+
             }
             o.addEventListener("click", changeClass);
             o.addEventListener("touchstart", changeClass);
+            });
+
         }
 
     });
