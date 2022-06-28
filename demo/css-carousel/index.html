@@ -5,6 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>纯 CSS 实现轮播效果</title>
     <style>
+
         .app {
             display: flex;
             flex-direction: column;
@@ -13,7 +14,7 @@
 
         /* 最外层包装容器, 用来隐藏滚动条 */
         .carousel-wrapper {
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         /* 滚动动画 不停向左滚动 滚动到一半 */
@@ -71,45 +72,74 @@
         .carousel-item {
             display: flex;
             flex: 1;
-            transition: all 150ms ease-in-out;
             justify-content: center;
             align-items: center;
             padding-left: 5px;
             padding-right: 5px;
         }
 
-        .card {
+        .card1,
+        .card2,
+        .card3,
+        .card4,
+        .card5,
+        .card6,
+        .card7 {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 50px;
-            border: 5px solid #28be00;
-            background: green;
             color: white;
+            transition: all 150ms ease-in-out;
+            box-sizing: border-box;
         }
 
-        /* hover 时我们改变一下颜色 */
-        .card:hover {
-            border: 5px solid #00b8be;
-            background: #004b80;
+        .card1 {
+            border: 5px solid #ff8080;
+            background: #f83434;
         }
 
         .card2 {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50px;
-            border: 5px solid #ffbf24;
+            border: 5px solid #fd9e62;
             background: #ff6200;
-            color: white;
         }
 
-        /* hover 时我们改变一下颜色 */
-        .card2:hover {
+        .card3 {
+            border: 5px solid #ffd900;
+            background: #ffbf24;
+        }
+
+        .card4 {
+            border: 5px solid #28be00;
+            background: green;
+        }
+
+        .card5 {
+            border: 5px solid #03f3fc;
+            background: #00b8be;
+        }
+
+        .card6 {
+            border: 5px solid #008cdd;
+            background: #004b80;
+        }
+
+        .card7 {
             border: 5px solid #b72bfe;
             background: #7b00be;
+        }
+
+        /* hover 时我们改变一下样式 */
+        .card1:hover,
+        .card2:hover,
+        .card3:hover,
+        .card4:hover,
+        .card5:hover,
+        .card6:hover,
+        .card7:hover {
+            transform: scale(0.9);
+            border-width: 7px;
         }
 
     </style>
@@ -123,44 +153,45 @@
         <div class="carousel">
 
             <div class="carousel-half">
+
                 <div class="carousel-item">
-                    <div class="card">
+                    <div class="card1">
                         <h1>1</h1>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <div class="card">
+                    <div class="card2">
                         <h1>2</h1>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <div class="card">
+                    <div class="card3">
                         <h1>3</h1>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <div class="card">
+                    <div class="card4">
                         <h1>4</h1>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <div class="card">
+                    <div class="card5">
                         <h1>5</h1>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <div class="card">
+                    <div class="card6">
                         <h1>6</h1>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <div class="card">
+                    <div class="card7">
                         <h1>7</h1>
                     </div>
                 </div>
@@ -168,6 +199,7 @@
             </div>
 
         </div>
+
     </div>
 
     <div class="carousel-wrapper">
@@ -175,9 +207,34 @@
         <div class="carousel-reverse">
 
             <div class="carousel-half">
+
                 <div class="carousel-item">
-                    <div class="card2">
-                        <h1>1</h1>
+                    <div class="card7">
+                        <h1>7</h1>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card6">
+                        <h1>6</h1>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card5">
+                        <h1>5</h1>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card4">
+                        <h1>4</h1>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card3">
+                        <h1>3</h1>
                     </div>
                 </div>
 
@@ -188,38 +245,15 @@
                 </div>
 
                 <div class="carousel-item">
-                    <div class="card2">
-                        <h1>3</h1>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="card2">
-                        <h1>4</h1>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="card2">
-                        <h1>5</h1>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="card2">
-                        <h1>6</h1>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="card2">
-                        <h1>7</h1>
+                    <div class="card1">
+                        <h1>1</h1>
                     </div>
                 </div>
 
             </div>
 
         </div>
+
     </div>
 
 </div>
