@@ -52,16 +52,20 @@
 
         .carousel-reverse {
             /* 动画 这里 5秒 一循环 */
-            animation: carousel-slide-reverse 5s infinite linear;
+            animation: carousel-slide-reverse 10s infinite linear;
         }
 
         /* 鼠标移入时暂停滚动动画 */
         .carousel:hover,
-        .carousel-reverse:hover,
-        .carousel.active,
-        .carousel-reverse.active {
+        .carousel-reverse:hover {
             /* 暂停动画 */
             animation-play-state: paused;
+        }
+
+        .carousel.active,
+        .carousel-reverse.active {
+            animation-duration: 1s;
+            animation-play-state: running;
         }
 
         .carousel-half {
@@ -292,7 +296,7 @@
             o.appendChild(o.querySelector(".carousel-half").cloneNode(true));
 
             const changeClass = (e) => {
-            
+
                 if (o.classList.contains("active")) {
                     o.classList.remove("active");
                 } else {
