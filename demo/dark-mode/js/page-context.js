@@ -3,7 +3,6 @@ class PageContext {
     themeSelect;
     scxApp;
     scxAppLoading;
-    scxAppLoadingStyle;
 
     eventMap = {
         changeThemeFromSelect: this.changeThemeFromSelect.bind(this)
@@ -17,7 +16,6 @@ class PageContext {
         this.themeSelect = document.querySelector("#theme-select");
         this.scxApp = document.querySelector("#scx-app");
         this.scxAppLoading = document.querySelector("#scx-app-loading");
-        this.scxAppLoadingStyle = document.querySelector("#scx-app-loading-style");
         return this;
     }
 
@@ -43,7 +41,6 @@ class PageContext {
 
     showContent() {
         document.body.removeChild(this.scxAppLoading);
-        document.head.removeChild(this.scxAppLoadingStyle);
         this.scxApp.removeAttribute("style");
         return this;
     }
