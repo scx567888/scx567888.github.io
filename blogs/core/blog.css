@@ -68,3 +68,14 @@ ul {
     padding: 4rem;
     position: relative;
 }
+
+@media (max-width: 900px) {
+
+    .title {
+        width: 92%;
+    }
+
+    .content {
+        width: 92%;
+    }
+}
