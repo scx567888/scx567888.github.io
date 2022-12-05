@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../core/highlight/styles/darcula.min.css">
+    <script type="module">
+        import highlight from "../core/highlight/core.js";
+        import java from "../core/highlight/languages/java.min.js";
+        import xml from "../core/highlight/languages/xml.min.js";
+
+        highlight.registerLanguage("java", java);
+        highlight.registerLanguage("xml", xml);
+        window.addEventListener("load", () => {
+            highlight.highlightAll();
+        });
+    </script>
+</head>
+<body>
+<h4>JDK19 下载后需要启用其预览功能. 可以直接在命令行加 --enable-preview, 如果你使用的是 Maven 也可以参考如下配置</h4>
+
+<p>假设我们想要编写一个爬虫程序 功能为获取某个壁纸网站的精选壁纸, 这里代码如下</p>
+<pre><code class="language-xml">
+&lt;?xml version="1.0" encoding="UTF-8"?>
+    &lt;project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+             xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    &lt;modelVersion>4.0.0&lt;/modelVersion>
+
+    ...
+
+    &lt;build>
+        &lt;plugins>
+
+            &lt;plugin>
+                &lt;groupId>org.apache.maven.plugins&lt;/groupId>
+                &lt;artifactId>maven-compiler-plugin&lt;/artifactId>
+                &lt;configuration>
+                    &lt;compilerArgs>
+                        &lt;arg>--enable-preview&lt;/arg>
+                    &lt;/compilerArgs>
+                &lt;/configuration>
+            &lt;/plugin>
+
+            &lt;plugin>
+                &lt;groupId>org.apache.maven.plugins&lt;/groupId>
+                &lt;artifactId>maven-surefire-plugin&lt;/artifactId>
+                &lt;configuration>
+                    &lt;argLine>--enable-preview&lt;/argLine>
+                &lt;/configuration>
+            &lt;/plugin>
+
+        &lt;/plugins>
+    &lt;/build>
+
+    ...
+
+&lt;/project>
+</code></pre>
+
+</body>
+</html>
