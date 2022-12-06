@@ -5,6 +5,13 @@
     <title>CSS 布局</title>
     <link href="../core/normalize.css" rel="stylesheet">
     <link href="../core/blog.css" rel="stylesheet">
+    <script type="module">
+        import {resizeAllIframe, resizeIframe} from "../core/iframe-resizer"
+
+        window.addEventListener("load", () => {
+            resizeIframe("observe",document.querySelectorAll("iframe"));
+        });
+    </script>
 </head>
 <body>
 <div class="app">
