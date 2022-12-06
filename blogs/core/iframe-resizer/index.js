@@ -76,4 +76,4 @@ function getAllIframe() {
     return Array.from(document.querySelectorAll("iframe"));
 }
 
-export {resizeAllIframe, resizeIframe}
+export {resizeAllIframe, resizeIframe, ObserveResizer, OnceResizer, LoopResizer, IgnoreResizer}

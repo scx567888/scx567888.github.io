@@ -29,6 +29,10 @@ class IframeResizer {
 
     }
 
+    unResize(){
+
+    }
+
     getDocumentElementHeight(){
         return Math.ceil(this.documentElement.scrollHeight);
     }

@@ -5,10 +5,16 @@ import {IframeResizer} from "./iframe-resizer.js";
  */
 class LoopResizer extends IframeResizer {
 
+    id;
+
     resize() {
         this.iframe.style.height = "auto"
         this.iframe.style.height = this.getDocumentElementHeight() + this.gap + "px"
-        requestAnimationFrame(() => this.resize())
+        this.id = requestAnimationFrame(() => this.resize());
+    }
+
+    unResize() {
+        cancelAnimationFrame(this.id);
     }
 
 }
