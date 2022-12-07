@@ -83,4 +83,9 @@ ul {
         padding: 8px;
     }
 
+    ul {
+        padding: 2rem;
+        font-size: 1rem;
+    }
+
 }
