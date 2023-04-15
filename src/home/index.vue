@@ -102,17 +102,11 @@
                     2021-12-11 视差
                 </a>
             </div>
-            <div class="content-item">
-                <a href="./blogs/2021-11-02-windows-note/index.html">
-                    2021-11-02 Windows 10 的一些不好记的操作
-                </a>
-                <div class="content-item" v-for="i in blogRoutes">
-                    <router-link :to="{name:i.name}">
-                        {{ getRouteTitle(i) }}
-                    </router-link>
-                </div>
+            <div class="content-item" v-for="i in blogRoutes">
+                <router-link :to="{name:i.name}">
+                    {{ getRouteTitle(i) }}
+                </router-link>
             </div>
-
         </div>
 
         <div class="footer">
