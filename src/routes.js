@@ -19,7 +19,7 @@ const routes = [
                 name: '2021-11-02-windows-note',
                 component: () => import('./blogs/2021-11-02-windows-note/index.vue'),
                 meta: {
-                    title: '2023-02-11 常用软件下载地址',
+                    title: '2021-11-02 Windows 10 的一些不好记的操作',
                 }
             },
         ]

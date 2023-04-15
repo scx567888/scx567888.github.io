@@ -2,20 +2,20 @@
     <div class="home">
         <div class="header">
             <div class="header-left">
-                <img src="public/logos/scx.svg" alt="">
+                <img src="/logos/scx.svg" alt="">
                 欢迎来到 SCX
             </div>
             <div class="header-right">
                 <div class="header-right-item active"><a href="./">博客</a></div>
-                <div class="header-right-item"><a href="src/docs/">文档</a></div>
-                <div class="header-right-item"><a href="public/logos/">Logos</a></div>
+                <div class="header-right-item"><a href="/docs/index.html">文档</a></div>
+                <div class="header-right-item"><a href="/logos/index.html">Logos</a></div>
             </div>
         </div>
         <div class="content">
-            <div class="content-item" v-for="i in blogRoutes">
-                <router-link :to="{name:i.name}">
-                    {{ getRouteTitle(i) }}
-                </router-link>
+            <div class="content-item">
+                <a href="./blogs/2023-02-11-software-download-link/index.html">
+                    2023-02-11 常用软件下载地址
+                </a>
             </div>
             <div class="content-item">
                 <a href="./blogs/2022-12-07-settimeout-imprecise/index.html">
@@ -106,6 +106,11 @@
                 <a href="./blogs/2021-11-02-windows-note/index.html">
                     2021-11-02 Windows 10 的一些不好记的操作
                 </a>
+                <div class="content-item" v-for="i in blogRoutes">
+                    <router-link :to="{name:i.name}">
+                        {{ getRouteTitle(i) }}
+                    </router-link>
+                </div>
             </div>
 
         </div>
