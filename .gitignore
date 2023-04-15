@@ -1,8 +1,4 @@
-**/.idea/
-
-**/target/
-**/built/
-
-*.iws
-*.iml
-*.ipr
+/.idea/
+/node_modules/
+/*/dist/
+package-lock.json
