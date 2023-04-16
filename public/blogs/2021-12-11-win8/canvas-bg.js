@@ -1,26 +1,26 @@
 function bg() {
     const parentDom = document.querySelector("#start");
-    const canvas1 = document.querySelector('#start-bg1');
-    const canvas2 = document.querySelector('#start-bg2');
+    const canvas1 = document.querySelector("#start-bg1");
+    const canvas2 = document.querySelector("#start-bg2");
     const config = {
         circle: {
             amount: 18,
             layer: 3,
             color: [157, 97, 207],
-            alpha: 0.3
+            alpha: 0.3,
         },
         line: {
             amount: 12,
             layer: 3,
             color: [255, 255, 255],
-            alpha: 0.3
+            alpha: 0.3,
         },
         speed: 0.5,
-        angle: 20
+        angle: 20,
     };
 
-    const canvas1Context = canvas1.getContext('2d');
-    const canvas2Context = canvas2.getContext('2d');
+    const canvas1Context = canvas1.getContext("2d");
+    const canvas2Context = canvas2.getContext("2d");
     const degree = config.angle / 360 * Math.PI * 2;
     let circles = [];
     let lines = [];
@@ -40,8 +40,8 @@ function bg() {
     //画圆
     const drawCircle = function (x, y, radius, color, alpha) {
         const gradient = canvas1Context.createRadialGradient(x, y, radius, x, y, 0);
-        gradient.addColorStop(0, 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + alpha + ')');
-        gradient.addColorStop(1, 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + (alpha - 0.1) + ')');
+        gradient.addColorStop(0, "rgba(" + color[0] + "," + color[1] + "," + color[2] + "," + alpha + ")");
+        gradient.addColorStop(1, "rgba(" + color[0] + "," + color[1] + "," + color[2] + "," + (alpha - 0.1) + ")");
 
         canvas1Context.beginPath();
         canvas1Context.arc(x, y, radius, 0, Math.PI * 2, true);
@@ -53,14 +53,14 @@ function bg() {
         const endX = x + Math.sin(degree) * width;
         const endY = y - Math.cos(degree) * width;
         const gradient = canvas2Context.createLinearGradient(x, y, endX, endY);
-        gradient.addColorStop(0, 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + alpha + ')');
-        gradient.addColorStop(1, 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + (alpha - 0.1) + ')');
+        gradient.addColorStop(0, "rgba(" + color[0] + "," + color[1] + "," + color[2] + "," + alpha + ")");
+        gradient.addColorStop(1, "rgba(" + color[0] + "," + color[1] + "," + color[2] + "," + (alpha - 0.1) + ")");
 
         canvas2Context.beginPath();
         canvas2Context.moveTo(x, y);
         canvas2Context.lineTo(endX, endY);
         canvas2Context.lineWidth = 3;
-        canvas2Context.lineCap = 'round';
+        canvas2Context.lineCap = "round";
         canvas2Context.strokeStyle = gradient;
         canvas2Context.stroke();
     };
@@ -81,7 +81,7 @@ function bg() {
                 if (x > wWidth + radius) {
                     x = -radius;
                 } else if (x < -radius) {
-                    x = wWidth + radius
+                    x = wWidth + radius;
                 } else {
                     x += sin * speed;
                 }
@@ -147,7 +147,7 @@ function bg() {
                         radius: Math.random() * (20 + j * 5) + (20 + j * 5),
                         color: config.circle.color,
                         alpha: Math.random() * 0.2 + (config.circle.alpha - j * 0.1),
-                        speed: config.speed * (1 + j * 0.5)
+                        speed: config.speed * (1 + j * 0.5),
                     });
                 }
             }
@@ -162,7 +162,7 @@ function bg() {
                         width: Math.random() * (20 + n * 5) + (20 + n * 5),
                         color: config.line.color,
                         alpha: Math.random() * 0.2 + (config.line.alpha - n * 0.1),
-                        speed: config.speed * (1 + n * 0.5)
+                        speed: config.speed * (1 + n * 0.5),
                     });
                 }
             }
@@ -177,4 +177,4 @@ function bg() {
 
 }
 
-export {bg}
+export {bg};

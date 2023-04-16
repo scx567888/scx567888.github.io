@@ -29,14 +29,14 @@ class IframeResizer {
 
     }
 
-    unResize(){
+    unResize() {
 
     }
 
-    getDocumentElementHeight(){
+    getDocumentElementHeight() {
         return Math.ceil(this.documentElement.scrollHeight);
     }
 
 }
 
-export {IframeResizer}
+export {IframeResizer};

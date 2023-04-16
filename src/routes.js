@@ -1,30 +1,30 @@
 const routes = [
     {
-        path: '/',
-        name: 'home',
-        component: () => import('./home/index.vue'),
+        path: "/",
+        name: "home",
+        component: () => import("./home/index.vue"),
         meta: {
-            title: '首页',
-        }
+            title: "首页",
+        },
     },
     {
-        path: '/blogs',
-        name: 'blogs',
+        path: "/blogs",
+        name: "blogs",
         meta: {
-            title: 'blog',
+            title: "blog",
         },
         children: [
             {
-                path: '2021-11-02-windows-note',
-                name: '2021-11-02-windows-note',
-                component: () => import('./blogs/2021-11-02-windows-note/index.vue'),
+                path: "2021-11-02-windows-note",
+                name: "2021-11-02-windows-note",
+                component: () => import("./blogs/2021-11-02-windows-note/index.vue"),
                 meta: {
-                    title: '2021-11-02 Windows 10 的一些不好记的操作',
-                }
+                    title: "2021-11-02 Windows 10 的一些不好记的操作",
+                },
             },
-        ]
+        ],
     },
-]
+];
 
 /**
  * 为路由设置 order
@@ -36,7 +36,7 @@ function setRoutesOrder(r) {
     function setRoutesOrder0(r0) {
         for (let e of r0) {
             if (!e.meta) {
-                e.meta = {}
+                e.meta = {};
             }
             e.meta.order = i;
             i = i + 1;
@@ -59,4 +59,4 @@ function getPageTitle(route) {
     return title == null ? "Scx WebSite" : title + " - Scx WebSite";
 }
 
-export {routes, setRoutesOrder, getPageTitle, getRouteTitle}
+export {routes, setRoutesOrder, getPageTitle, getRouteTitle};

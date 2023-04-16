@@ -5,12 +5,12 @@ import {IframeResizer} from "./iframe-resizer.js";
  */
 class ObserveResizer extends IframeResizer {
 
-    resizeObserver
+    resizeObserver;
 
     resize() {
         this.resizeObserver = new ResizeObserver((entries) => {
-            this.iframe.style.height = "auto"
-            this.iframe.style.height = this.getDocumentElementHeight() + this.gap + "px"
+            this.iframe.style.height = "auto";
+            this.iframe.style.height = this.getDocumentElementHeight() + this.gap + "px";
         });
         this.resizeObserver.observe(this.documentElement);
     }
@@ -22,4 +22,4 @@ class ObserveResizer extends IframeResizer {
 
 }
 
-export {ObserveResizer}
+export {ObserveResizer};

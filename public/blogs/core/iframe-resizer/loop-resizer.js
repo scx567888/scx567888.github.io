@@ -8,8 +8,8 @@ class LoopResizer extends IframeResizer {
     id;
 
     resize() {
-        this.iframe.style.height = "auto"
-        this.iframe.style.height = this.getDocumentElementHeight() + this.gap + "px"
+        this.iframe.style.height = "auto";
+        this.iframe.style.height = this.getDocumentElementHeight() + this.gap + "px";
         this.id = requestAnimationFrame(() => this.resize());
     }
 
@@ -19,4 +19,4 @@ class LoopResizer extends IframeResizer {
 
 }
 
-export {LoopResizer}
+export {LoopResizer};

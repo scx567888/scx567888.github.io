@@ -1,12 +1,12 @@
-import {createApp} from 'vue'
-import './style.css'
-import App from './App.vue'
+import {createApp} from "vue";
+import "./style.css";
+import App from "./App.vue";
 import {createRouter, createWebHistory} from "vue-router";
 import {getPageTitle, routes, setRoutesOrder} from "./routes.js";
 
 const router = createRouter({
     history: createWebHistory(),
-    routes: setRoutesOrder(routes)
+    routes: setRoutesOrder(routes),
 });
 
 router.beforeEach(async (to, from) => {
@@ -15,4 +15,4 @@ router.beforeEach(async (to, from) => {
 
 createApp(App)
     .use(router)
-    .mount('#app');
+    .mount("#app");

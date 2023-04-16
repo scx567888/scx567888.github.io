@@ -98,5 +98,5 @@ function getDistance(a, b) {
 }
 
 export {
-    findNearestElement
-}
+    findNearestElement,
+};
