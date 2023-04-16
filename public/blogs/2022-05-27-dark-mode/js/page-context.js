@@ -5,8 +5,8 @@ class PageContext {
     scxAppLoading;
 
     eventMap = {
-        changeThemeFromSelect: this.changeThemeFromSelect.bind(this)
-    }
+        changeThemeFromSelect: this.changeThemeFromSelect.bind(this),
+    };
 
     constructor() {
 
@@ -53,14 +53,14 @@ class PageContext {
 
     changeTheme(theme) {
         if (theme === "dark") {
-            document.documentElement.setAttribute('theme', "dark");
+            document.documentElement.setAttribute("theme", "dark");
         } else if (theme === "light") {
-            document.documentElement.setAttribute('theme', "light");
+            document.documentElement.setAttribute("theme", "light");
         } else if (theme === "system") {
-            document.documentElement.removeAttribute('theme');
+            document.documentElement.removeAttribute("theme");
         }
     }
 
 }
 
-export {PageContext}
+export {PageContext};

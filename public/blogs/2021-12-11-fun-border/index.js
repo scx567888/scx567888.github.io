@@ -66,13 +66,13 @@ function addBorder(needAddBorderElements, time = 400, onChange) {
         //当动画执行完毕 从页面中移除 borderElement
         setTimeOutEvent = setTimeout(() => {
             if (!e.classList.contains("has-border")) {
-                e.classList.add("has-border")
+                e.classList.add("has-border");
             }
-            borderElement.style.display = "none"
+            borderElement.style.display = "none";
             borderElement.style.transition = "unset";
             nowHasMove = false;
-        }, time)
+        }, time);
     }
 }
 
-export {addBorder}
+export {addBorder};

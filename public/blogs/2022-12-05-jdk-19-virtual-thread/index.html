@@ -7,7 +7,8 @@
     <link href="../core/normalize.css" rel="stylesheet">
     <link href="../core/blog.css" rel="stylesheet">
     <script type="module">
-        import {resizeAllIframe, resizeIframe} from "../core/iframe-resizer/index.js"
+        import {resizeAllIframe} from "../core/iframe-resizer/index.js"
+
         window.addEventListener("load", () => resizeAllIframe());
     </script>
     <style>
@@ -31,7 +32,7 @@
             <div>
                 <h3 style="color: #f14b79">1, 首先来说 JDK19 并不是长期支持版, 而且其虚拟线程的功能还需要手动启用.
                     所以在正式版 (21) 发布之前,我们还是 "玩玩" 就好😊.</h3>
-                <iframe  src="a2.html"></iframe>
+                <iframe src="a2.html"></iframe>
                 <h4>当然,虚拟线程并不能增加速度, 但是却可以大大的提升并发量. 以上的测试并不严谨, 但基本展示了虚拟线程的简单使用和大致性能,
                     相信等到 JDK 21 发售的时候, 能够在性能上更加优化</h4>
             </div>

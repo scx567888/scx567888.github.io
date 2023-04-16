@@ -2,7 +2,7 @@
     <div class="home">
         <div class="header">
             <div class="header-left">
-                <img src="/logos/scx.svg" alt="">
+                <img alt="" src="/logos/scx.svg">
                 欢迎来到 SCX
             </div>
             <div class="header-right">
@@ -102,7 +102,7 @@
                     2021-12-11 视差
                 </a>
             </div>
-            <div class="content-item" v-for="i in blogRoutes">
+            <div v-for="i in blogRoutes" class="content-item">
                 <router-link :to="{name:i.name}">
                     {{ getRouteTitle(i) }}
                 </router-link>

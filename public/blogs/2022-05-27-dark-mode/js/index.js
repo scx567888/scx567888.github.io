@@ -7,5 +7,5 @@ window.addEventListener("load", () => {
         .bindEvent()
         .loadThemeFromLocalStorage();
     //这里模拟内容页面加载时的速度很慢
-    setTimeout(() => ctx.showContent(), 500)
+    setTimeout(() => ctx.showContent(), 500);
 });
