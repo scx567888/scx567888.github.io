@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 @keyframes bg {
     0% {
         background-color: rgb(64, 64, 64);
