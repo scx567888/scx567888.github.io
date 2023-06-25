@@ -8,6 +8,8 @@
         </div>
     </div>
 </template>
+<script setup>
+</script>
 <style scoped>
 .wrapper {
     width: 400px;
@@ -32,5 +34,4 @@
     padding: 10px;
 }
 </style>
-<script setup>
-</script>
+
