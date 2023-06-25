@@ -89,6 +89,14 @@ const routes = [
                 },
             },
             {
+                path: "2021-12-11-parallax",
+                name: "2021-12-11-parallax",
+                component: () => import("./blogs/2021-12-11-parallax/index.vue"),
+                meta: {
+                    title: "2021-12-11 视差",
+                },
+            },
+            {
                 path: "2021-11-02-windows-note",
                 name: "2021-11-02-windows-note",
                 component: () => import("./blogs/2021-11-02-windows-note/index.vue"),
