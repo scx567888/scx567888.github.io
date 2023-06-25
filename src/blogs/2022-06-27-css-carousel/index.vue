@@ -2,13 +2,13 @@
 
     <div class="css-carousel">
 
-        <div class="carousel-wrapper" v-for="j in 20">
+        <div v-for="j in 20" class="carousel-wrapper">
 
-            <div :class="j % 2 === 0 ? 'carousel' : 'carousel-reverse'" ref="carouselRefs">
+            <div ref="carouselRefs" :class="j % 2 === 0 ? 'carousel' : 'carousel-reverse'">
 
-                <div class="carousel-half" v-for="i in 2">
+                <div v-for="i in 2" class="carousel-half">
 
-                    <div class="carousel-item" v-for="k in 7">
+                    <div v-for="k in 7" class="carousel-item">
                         <div :class="'card' + k">
                             <h1>{{ k }}</h1>
                         </div>

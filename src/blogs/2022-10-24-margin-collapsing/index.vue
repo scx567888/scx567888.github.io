@@ -1,58 +1,61 @@
 <template>
-    <h4>
-        详情参见 <a
-            href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距折叠</a>
-        <br>
-        在开发中, 如果发现上下边距不符合预期, 可以考虑是否发生了外边距折叠
-        <br>
-        Flex 布局可以避免这种情况
-        <br>
-        如下所示 :
-    </h4>
+    <div style="padding: 10px">
+        <h4>
+            详情参见 <a
+                href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距折叠</a>
+            <br>
+            在开发中, 如果发现上下边距不符合预期, 可以考虑是否发生了外边距折叠
+            <br>
+            Flex 布局可以避免这种情况
+            <br>
+            如下所示 :
+        </h4>
 
-    <div style="display: flex;row-gap: 10px;column-gap: 20px;padding: 10px">
-        <div>
-            <h4>flex (没有发生外边距折叠)</h4>
-            <h3 class="b1"></h3>
-            <div class="p1" style="display: flex;flex-direction: column">
-                <div class="div1">
-                    width: 200px
-                    <br>
-                    height: 200px
-                    <br>
-                    margin-bottom: 50px
-                </div>
-                <div class="div2">
-                    width: 200px
-                    <br>
-                    height: 200px
-                    <br>
-                    margin-top: 30px
+        <div style="display: flex;row-gap: 10px;column-gap: 20px;padding: 10px">
+            <div>
+                <h4>flex (没有发生外边距折叠)</h4>
+                <h3 class="b1"></h3>
+                <div class="p1" style="display: flex;flex-direction: column">
+                    <div class="div1">
+                        width: 200px
+                        <br>
+                        height: 200px
+                        <br>
+                        margin-bottom: 50px
+                    </div>
+                    <div class="div2">
+                        width: 200px
+                        <br>
+                        height: 200px
+                        <br>
+                        margin-top: 30px
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div>
-            <h4>默认 (发生了外边距折叠)</h4>
-            <h3 class="b2"></h3>
-            <div class="p2">
-                <div class="div1">
-                    width: 200px
-                    <br>
-                    height: 200px
-                    <br>
-                    margin-bottom: 50px
-                </div>
-                <div class="div2">
-                    width: 200px
-                    <br>
-                    height: 200px
-                    <br>
-                    margin-top: 30px
+            <div>
+                <h4>默认 (发生了外边距折叠)</h4>
+                <h3 class="b2"></h3>
+                <div class="p2">
+                    <div class="div1">
+                        width: 200px
+                        <br>
+                        height: 200px
+                        <br>
+                        margin-bottom: 50px
+                    </div>
+                    <div class="div2">
+                        width: 200px
+                        <br>
+                        height: 200px
+                        <br>
+                        margin-top: 30px
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+   
 </template>
 
 <script setup>
