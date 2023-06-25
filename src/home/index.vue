@@ -13,7 +13,7 @@
         </div>
         <div class="content">
             <div class="content-item">
-                <a href="./blogs/2023-02-11-software-download-link/index.html">
+                <a href="./blogs/2023-02-11-software-download-link">
                     2023-02-11 常用软件下载地址
                 </a>
             </div>
@@ -103,7 +103,7 @@
                 </a>
             </div>
             <div v-for="i in blogRoutes" class="content-item">
-                <router-link :to="{name:i.name}">
+                <router-link :to="i">
                     {{ getRouteTitle(i) }}
                 </router-link>
             </div>
@@ -118,22 +118,15 @@
 
 <script setup>
 import {useRouter} from "vue-router";
-import {computed} from "vue";
 import {getRouteTitle} from "../routes.js";
 
 const router = useRouter();
 
 const routes = router.getRoutes();
 
-const blogRoutes = computed(() => {
-    return routes.filter(isBlogRoute);
-});
+const blogsRoot = routes.find(c => c.name === "blogs");
 
-function isBlogRoute(route) {
-    return route.path.startsWith("/blogs/");
-}
-
-console.log(routes)
+const blogRoutes = blogsRoot.children;
 
 </script>
 

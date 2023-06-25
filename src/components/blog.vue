@@ -1,3 +1,21 @@
+<template>
+    <div class="blog">
+        <div class="title">
+            <slot name="title">这是一篇博客</slot>
+        </div>
+        <div class="content">
+            <slot name="content">这是内容</slot>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "blog"
+};
+</script>
+
+<style scoped>
 @keyframes bg {
     0% {
         background-color: rgb(64, 64, 64);
@@ -89,3 +107,4 @@ ul {
     }
 
 }
+</style>

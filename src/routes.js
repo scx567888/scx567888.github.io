@@ -15,6 +15,22 @@ const routes = [
         },
         children: [
             {
+                path: "2023-02-11-software-download-link",
+                name: "2023-02-11-software-download-link",
+                component: () => import("./blogs/2023-02-11-software-download-link/index.vue"),
+                meta: {
+                    title: "2023-02-11 常用软件下载地址",
+                },
+            },
+            {
+                path: "2022-06-27-css-carousel",
+                name: "2022-06-27-css-carousel",
+                component: () => import("./blogs/2022-06-27-css-carousel/index.vue"),
+                meta: {
+                    title: "2022-06-27 纯 CSS 实现轮播效果",
+                },
+            },
+            {
                 path: "2021-11-02-windows-note",
                 name: "2021-11-02-windows-note",
                 component: () => import("./blogs/2021-11-02-windows-note/index.vue"),
