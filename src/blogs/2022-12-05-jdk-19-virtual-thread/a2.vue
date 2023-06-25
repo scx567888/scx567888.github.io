@@ -1,7 +1,7 @@
 <template>
     <h4>JDK19 下载后需要启用其预览功能. 可以直接在命令行加 --enable-preview, 如果你使用的是 Maven
         也可以参考如下配置</h4>
-    <highlight language="xml" code='
+    <highlight code='
   &lt;?xml version="1.0" encoding="UTF-8"?>
       &lt;project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
                xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -35,7 +35,7 @@
   
       ...
   
-  &lt;/project>'/>
+  &lt;/project>' language="xml"/>
 
     <p>下面我们使用 虚拟线程 来编写刚才的程序</p>
     <highlight code="
