@@ -31,21 +31,6 @@
             </a>
         </div>
         <div class="content-item">
-            <a href="./blogs/2022-10-24-layout/index.html">
-                2022-10-24 CSS 布局
-            </a>
-        </div>
-        <div class="content-item">
-            <a href="./blogs/2022-10-24-center-background-image/index.html">
-                2022-10-24 居中的背景图像
-            </a>
-        </div>
-        <div class="content-item">
-            <a href="./blogs/2022-10-24-margin-collapsing/index.html">
-                2022-10-24 外边距折叠
-            </a>
-        </div>
-        <div class="content-item">
             <a href="./blogs/2022-10-21-box-sizing/index.html">
                 2022-10-21 Box Sizing
             </a>
