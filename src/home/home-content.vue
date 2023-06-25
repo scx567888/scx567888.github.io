@@ -1,23 +1,14 @@
 <template>
     <div class="content">
-        <div class="content-item">
-            <a href="./blogs/2023-02-11-software-download-link">
-                2023-02-11 常用软件下载地址
-            </a>
+        <div v-for="i in blogRoutes" class="content-item">
+            <router-link :to="i">
+                {{ getRouteTitle(i) }}
+            </router-link>
         </div>
+        旧版博客
         <div class="content-item">
             <a href="./blogs/2022-12-07-settimeout-imprecise/index.html">
                 2022-12-07 setTimeout() 和 setInterval() 不准确
-            </a>
-        </div>
-        <div class="content-item">
-            <a href="./blogs/2022-12-05-jdk-19-virtual-thread/index.html">
-                2022-12-05 JDK 19 虚拟线程 (Virtual Thread)
-            </a>
-        </div>
-        <div class="content-item">
-            <a href="./blogs/2022-10-28-kof-98-life/index.html">
-                2022-10-28 KOF 98 血条
             </a>
         </div>
         <div class="content-item">
@@ -28,11 +19,6 @@
         <div class="content-item">
             <a href="./blogs/2022-10-25-hacking-css-animation-state-and-playback-time/index.html">
                 2022-10-25 Hacking CSS 动画状态和播放时间
-            </a>
-        </div>
-        <div class="content-item">
-            <a href="./blogs/2022-10-21-box-sizing/index.html">
-                2022-10-21 Box Sizing
             </a>
         </div>
         <div class="content-item">
@@ -64,11 +50,6 @@
             <a href="./blogs/2021-12-11-parallax/index.html">
                 2021-12-11 视差
             </a>
-        </div>
-        <div v-for="i in blogRoutes" class="content-item">
-            <router-link :to="i">
-                {{ getRouteTitle(i) }}
-            </router-link>
         </div>
     </div>
 </template>

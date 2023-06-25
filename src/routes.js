@@ -23,11 +23,69 @@ const routes = [
                 },
             },
             {
+                path: "2022-12-05-jdk-19-virtual-thread",
+                name: "2022-12-05-jdk-19-virtual-thread",
+                component: () => import("./blogs/2022-12-05-jdk-19-virtual-thread/index.vue"),
+                meta: {
+                    title: "2022-12-05 JDK 19 虚拟线程 (Virtual Thread)",
+                },
+            },
+
+
+            {
+                path: "2022-10-28-kof-98-life",
+                name: "2022-10-28-kof-98-life",
+                component: () => import("./blogs/2022-10-28-kof-98-life/index.vue"),
+                meta: {
+                    title: "2022-10-28 KOF 98 血条",
+                },
+            },
+            {
+                path: "2022-10-24-layout",
+                name: "2022-10-24-layout",
+                component: () => import("./blogs/2022-10-24-layout/index.vue"),
+                meta: {
+                    title: "2022-10-24 CSS 布局",
+                },
+            },
+            {
+                path: "2022-10-24-center-background-image",
+                name: "2022-10-24-center-background-image",
+                component: () => import("./blogs/2022-10-24-center-background-image/index.vue"),
+                meta: {
+                    title: "2022-10-24 居中的背景图像",
+                },
+            },
+            {
+                path: "2022-10-24-margin-collapsing",
+                name: "2022-10-24-margin-collapsing",
+                component: () => import("./blogs/2022-10-24-margin-collapsing/index.vue"),
+                meta: {
+                    title: "2022-10-24 外边距折叠",
+                },
+            },
+            {
+                path: "2022-10-21-box-sizing",
+                name: "2022-10-21-box-sizing",
+                component: () => import("./blogs/2022-10-21-box-sizing/index.vue"),
+                meta: {
+                    title: "2022-10-21 Box Sizing",
+                },
+            },
+            {
                 path: "2022-06-27-css-carousel",
                 name: "2022-06-27-css-carousel",
                 component: () => import("./blogs/2022-06-27-css-carousel/index.vue"),
                 meta: {
                     title: "2022-06-27 纯 CSS 实现轮播效果",
+                },
+            },
+            {
+                path: "2022-05-19-clip-path_shape-outside",
+                name: "2022-05-19-clip-path_shape-outside",
+                component: () => import("./blogs/2022-05-19-clip-path_shape-outside/index.vue"),
+                meta: {
+                    title: "2022-05-19 浮动元素及环绕文字",
                 },
             },
             {
