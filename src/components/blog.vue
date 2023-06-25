@@ -1,9 +1,9 @@
 <template>
     <div class="blog">
-        <div class="title">
+        <div class="blog-title">
             <slot name="title">这是一篇博客</slot>
         </div>
-        <div class="content">
+        <div class="blog-content">
             <slot name="content">这是内容</slot>
         </div>
     </div>
@@ -45,7 +45,7 @@ export default {
     align-items: center;
 }
 
-.title {
+.blog-title {
     padding: 10px;
     backdrop-filter: blur(2px);
     background-color: rgba(170, 170, 170, 0.3);
@@ -55,7 +55,7 @@ export default {
     width: 60%;
 }
 
-.content {
+.blog-content {
     border-width: 5px;
     border-style: dashed;
     border-color: darkseagreen;
@@ -92,11 +92,11 @@ ul {
         gap: 8px;
     }
 
-    .title {
+    .blog-title {
         width: 100%;
     }
 
-    .content {
+    .blog-content {
         width: 100%;
         padding: 8px;
     }

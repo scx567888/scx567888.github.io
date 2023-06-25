@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="home-footer">
         🐴🌶🕊👃🦆
     </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped>
-.footer {
+.home-footer {
     position: absolute;
     opacity: 0;
     bottom: 5px;
@@ -20,7 +20,7 @@ export default {
     transition: all 300ms;
 }
 
-.footer:hover {
+.home-footer:hover {
     opacity: 1;
     transform: scale(1);
 }
