@@ -1,5 +1,5 @@
 <template>
-    <div id="www" style="position:absolute;height: 100%;width: 100%;overflow: auto">
+    <div id="www" style="position:absolute;height: 100%;width: 100%;overflow: auto;padding: 10px">
         <h1>占位符</h1>
         <h1>占位符</h1>
         <h1>占位符</h1>

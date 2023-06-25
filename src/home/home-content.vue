@@ -46,11 +46,6 @@
                 2021-12-11 Fun Border
             </a>
         </div>
-        <div class="content-item">
-            <a href="./blogs/2021-12-11-parallax/index.html">
-                2021-12-11 视差
-            </a>
-        </div>
     </div>
 </template>
 
