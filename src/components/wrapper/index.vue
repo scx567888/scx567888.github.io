@@ -14,7 +14,7 @@ export default {
     props: {
         resizer: {
             default: "once"
-        }
+        },
     },
     setup(props) {
         const wrapperRef = ref();

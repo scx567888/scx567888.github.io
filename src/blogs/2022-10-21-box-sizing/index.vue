@@ -11,14 +11,14 @@
     <div style="display: flex;height: 500px;width:1400px;padding: 20px;column-gap: 20px">
         <div style="width: 50%;">
             <h4> 默认状态 (div1 和 div2 中的 padding 会导致整体的宽高变大并溢出父元素)</h4>
-            <wrapper resizer="none" style="width: 100%;height: 100%;resize: unset">
+            <wrapper resizer="ignore" style="width: 100%;height: 100%;resize: unset">
                 <default/>
             </wrapper>
         </div>
         <div style="width: 50%;">
             <h4> 将 box-sizing 设置为 border-box
             </h4>
-            <wrapper resizer="none" style="width: 100%;height: 100%;resize: unset">
+            <wrapper resizer="ignore" style="width: 100%;height: 100%;resize: unset">
                 <use-normalize/>
             </wrapper>
         </div>
