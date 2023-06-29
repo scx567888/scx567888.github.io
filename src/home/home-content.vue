@@ -12,11 +12,6 @@
             </a>
         </div>
         <div class="home-content-item">
-            <a href="./blogs/2022-10-25-tree-background/index.html">
-                2022-10-25 无限延长的 树 背景图
-            </a>
-        </div>
-        <div class="home-content-item">
             <a href="./blogs/2022-10-25-hacking-css-animation-state-and-playback-time/index.html">
                 2022-10-25 Hacking CSS 动画状态和播放时间
             </a>

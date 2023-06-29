@@ -15,6 +15,14 @@ const routes = [
         },
         children: [
             {
+                path: "2023-06-29-favorites",
+                name: "2023-06-29-favorites",
+                component: () => import("./blogs/2023-06-29-favorites/index.vue"),
+                meta: {
+                    title: "2023 06 29 收藏夹",
+                },
+            },
+            {
                 path: "2023-02-11-software-download-link",
                 name: "2023-02-11-software-download-link",
                 component: () => import("./blogs/2023-02-11-software-download-link/index.vue"),
@@ -30,8 +38,6 @@ const routes = [
                     title: "2022-12-05 JDK 19 虚拟线程 (Virtual Thread)",
                 },
             },
-
-
             {
                 path: "2022-10-28-kof-98-life",
                 name: "2022-10-28-kof-98-life",
@@ -40,6 +46,14 @@ const routes = [
                     title: "2022-10-28 KOF 98 血条",
                 },
             },
+            {
+                path: "2022-10-25-tree-background",
+                name: "2022-10-25-tree-background",
+                component: () => import("./blogs/2022-10-25-tree-background/index.vue"),
+                meta: {
+                    title: "2022-10-25 无限延长的 树 背景图",
+                },
+            },    
             {
                 path: "2022-10-24-layout",
                 name: "2022-10-24-layout",
