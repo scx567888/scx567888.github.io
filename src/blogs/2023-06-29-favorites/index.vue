@@ -79,6 +79,10 @@
                 <li>
                     SNK Wiki | Fandom <a href="https://snk.fandom.com/wiki/Main_Page" target="_blank">https://snk.fandom.com/wiki/Main_Page</a>
                 </li>
+                
+                <li>
+                    Zophar's Domain <a href="https://www.zophar.net/" target="_blank">https://www.zophar.net/</a>
+                </li>
 
                 <li>
                     Arcade Database <a href="http://adb.arcadeitalia.net/default.php" target="_blank">http://adb.arcadeitalia.net/default.php</a>
