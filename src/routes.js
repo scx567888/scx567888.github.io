@@ -19,7 +19,7 @@ const routes = [
                 name: "2023-06-29-favorites",
                 component: () => import("./blogs/2023-06-29-favorites/index.vue"),
                 meta: {
-                    title: "2023 06 29 收藏夹",
+                    title: "2023-06-29 收藏夹",
                 },
             },
             {
