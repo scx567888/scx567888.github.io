@@ -1,0 +1,11 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="655,30 272,414 612,414 369,742 752,358 412,358" fill="#774532"/>
+    <text font-style="italic" font-weight="bold" font-family="'Courier New'"
+          font-size="145" y="937" x="20" fill="#774532">
+        SCX-LOGGING
+    </text>
+    <text font-style="italic" font-weight="bold" font-family="'Courier New'"
+          font-size="145" y="930" x="20" fill="#ffffff" opacity="0.25">
+        SCX-LOGGING
+    </text>
+</svg>
