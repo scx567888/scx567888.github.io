@@ -1,5 +1,6 @@
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="717,0 195,552 636,552 307,1024 829,472 388,472" fill="#00bcd4"
+    <polygon points="717,0 195,552 636,552 307,1024 829,472 388,472"
+             fill="#00bcd4"
              transform="scale(0.7) translate(220,40)"/>
     <text font-style="italic" font-weight="bold" font-family="'Courier New'"
           font-size="210" y="937" x="61" fill="#5ebbc7">
