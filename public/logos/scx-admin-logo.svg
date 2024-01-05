@@ -12,8 +12,8 @@
     </text>
     <defs>
         <linearGradient id="myGradient" gradientTransform="rotate(90)">
-            <stop offset="0%" stop-color="#FF0058"/>
-            <stop offset="100%" stop-color="#FF0700"/>
+            <stop offset="0%" stop-color="#F0386B"/>
+            <stop offset="100%" stop-color="#FF0000"/>
         </linearGradient>
     </defs>
 </svg>
