@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dark Mode</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/light.css" rel="stylesheet">
+    <link href="css/dark.css" rel="stylesheet">
+    <script src="../2022-09-08-scx-loading-v2/scx-loading.js" type="module"></script>
+</head>
+
+<body>
+
+<!-- loading 页面 若页面完全加载完成会被移除 -->
+<scx-loading id="scx-app-loading"></scx-loading>
+
+<!-- 内容区 默认隐藏 -->
+<div id="scx-app" class="scx-app" style="display: none">
+    <div>
+        <label for="theme-select">主题</label>
+        <select id="theme-select">
+            <option value="system">跟随系统</option>
+            <option value="light">亮色</option>
+            <option value="dark">暗色</option>
+        </select>
+    </div>
+</div>
+
+<script src="js/index.js" type="module"></script>
+
+</body>
+</html>
