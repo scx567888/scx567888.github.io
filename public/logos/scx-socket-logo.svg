@@ -1,0 +1,19 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="717,0 195,552 636,552 307,1024 829,472 388,472"
+             fill="url(#myGradient)"
+             transform="scale(0.7) translate(220,40)"/>
+    <text font-style="italic" font-weight="bold" font-family="'Courier New'"
+          font-size="160" y="925" x="25" fill="url(#myGradient)">
+        SCX-SOCKET
+    </text>
+    <text font-style="italic" font-weight="bold" font-family="'Courier New'"
+          font-size="160" y="920" x="25" fill="#ffffff" opacity="0.25">
+        SCX-SOCKET
+    </text>
+    <defs>
+        <linearGradient id="myGradient" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#FFF346"/>
+            <stop offset="100%" stop-color="#FE6E00"/>
+        </linearGradient>
+    </defs>
+</svg>

@@ -1,0 +1,10 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="717,0 195,552 636,552 307,1024 829,472 388,472"
+             fill="url(#myGradient)"/>
+    <defs>
+        <linearGradient id="myGradient" gradientTransform="rotate(90)">
+            <stop offset="0%" stop-color="#489349"/>
+            <stop offset="100%" stop-color="#70960c"/>
+        </linearGradient>
+    </defs>
+</svg>

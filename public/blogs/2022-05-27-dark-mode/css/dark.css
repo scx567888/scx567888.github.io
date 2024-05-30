@@ -1,0 +1,17 @@
+/*显式设置为黑暗模式或遵循系统时使用 黑暗模式*/
+:root[theme="dark"] {
+    color-scheme: dark;
+    --scx-app_theme: rgb(72, 147, 73);
+    --scx-app_bg: #2b2b2b;
+    --scx-app_color: whitesmoke;
+}
+
+/*todo 如何 和上方共用一套 css ? 而不是重复编写 ? */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        --scx-app_theme: rgb(72, 147, 73);
+        --scx-app_bg: #2b2b2b;
+        --scx-app_color: whitesmoke;
+    }
+}

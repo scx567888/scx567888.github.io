@@ -1,0 +1,16 @@
+.has-border {
+    z-index: 1;
+    animation: changeShadow 1s ease-in infinite;
+}
+
+@keyframes changeShadow {
+    0% {
+        box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 3px 5px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.8);
+    }
+}

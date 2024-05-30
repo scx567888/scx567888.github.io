@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hacking CSS 动画状态和播放时间</title>
+    <link href="../core/normalize.css" rel="stylesheet">
+    <link href="../core/blog.css" rel="stylesheet">
+    <style>
+        iframe {
+            resize: unset;
+        }
+    </style>
+</head>
+<body>
+<div class="blog">
+    <div class="title">Hacking CSS 动画状态和播放时间</div>
+    <div class="content">
+        <a href="https://css-tricks.com/hacking-css-animation-state-and-playback-time/"><h3>点击查看原文</h3></a>
+        <div>
+            <h2>问题一 如何重播动画</h2>
+            <div>
+                <h3 style="color: #f14b79">1, 事实上 你无法仅用 CSS 重播现有的 CSS 动画 !!!</h3>
+                <iframe src="e1.html" style="height: 200px"></iframe>
+            </div>
+            <div>
+                <h3 style="color: #f14b79">2, 通过 JS 我们可以做到这一点 !!!</h3>
+                <iframe src="e2.html" style="height: 200px"></iframe>
+            </div>
+            <h2>问题二 如何改变动画速度</h2>
+            <div>
+                <h3 style="color: #f14b79">1, 直接更改 animation-duration 的值</h3>
+                <iframe src="f1.html" style="height: 300px"></iframe>
+                <h4>
+                    是的，动画速度变慢了。但看起来仍有问题。当你切换复选框。🐶似乎跳到一个随机的位置，而不是最初的位置。怎么会这样？</h4>
+                <h4 style="font-style: italic;color: dimgrey">W3C :
+                    在动画运行时对动画属性值的更改将应用，就好像动画开始时就具有这些值一样</h4>
+            </div>
+            <div>
+                <h3 style="color: #f14b79">2, 利用多个动画进行叠加</h3>
+                <iframe src="f2.html" style="height: 300px"></iframe>
+                <h4>在此版本中，慢动作可以无缝地进入或退出。也没有使用实验性功能。那么，这是完美的解决方案吗？是和否。
+                </h4>
+                <ul>
+                    <li>齿轮: 有两个 <code>&lt;div&gt;</code>s. 一个是另一个的父元素. 都具有相同的
+                        <code>spin</code> animation 但是 <code>animation-duration</code> 的值不同. 元素的最终状态是两个动画的累积
+                        .
+                    </li>
+                    <li>挡位: 最开始, 只有一个 <code>&lt;div&gt;</code> 的 animation 状态为 animation running. 另一个
+                        则会 paused (暂停). 当 checkbox 进行切换时, 两个 animation 将会交换其的状态.
+                    </li>
+                </ul>
+                <h4>虽然成功实现了效果 , 但是此方式局限性很大, 通常不适用于其他类型的动画</h4>
+            </div>
+            <div>
+                <h3 style="color: #f14b79">3, 使用 JS 计算并设置 animation-delay</h3>
+                <iframe src="f3.html" style="height: 300px"></iframe>
+                <h4>基本上，您需要添加一个动画进度跟踪器，然后仔细计算新动画。但是，有时获取正确的 animation-delay
+                    值可能很棘手（但可能）。</h4>
+            </div>
+            <div>
+                <h3 style="color: #f14b79">4, 使用 JS 直接操作 Animation 对象</h3>
+                <iframe src="f4.html" style="height: 300px"></iframe>
+            </div>
+            <div>
+                <h3 style="color: #f14b79">5, 未来可能会直接支持 </h3>
+                <h4>参见此 : <a href="https://github.com/w3c/csswg-drafts/issues/980">issues</a></h4>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
