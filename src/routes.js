@@ -17,6 +17,22 @@ const routes = [
             {
                 path: "2024",
                 children: [{
+                    path: "09",
+                    children: [
+                        {
+                            path: "09", children: [
+                                {
+                                    path: "2024-09-09-Angel",
+                                    name: "2024-09-09-Angel",
+                                    component: () => import("./views/blogs/2024/09/09/Angel/index.vue"),
+                                    meta: {
+                                        title: "2024-09-09 Angel 出招表",
+                                    },
+                                },
+                            ],
+                        },
+                    ],
+                },{
                     path: "05",
                     children: [
                         {
