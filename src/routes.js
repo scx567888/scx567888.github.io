@@ -28,6 +28,13 @@ const routes = [
                                     meta: {
                                         title: "2024-09-09 Angel 出招表",
                                     },
+                                },{
+                                    path: "2024-09-09-Hyper-OS-Uninstall-List",
+                                    name: "2024-09-09-Hyper-OS-Uninstall-List",
+                                    component: () => import("./views/blogs/2024/09/09/Hyper-OS-Uninstall-List/index.vue"),
+                                    meta: {
+                                        title: "2024-09-09 Hyper OS 卸载清单",
+                                    },
                                 },
                             ],
                         },
