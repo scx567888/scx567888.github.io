@@ -78,8 +78,8 @@ const list = [
         type: "3, 下载相关",
         list: [
             {
-                name: "BTNull - 无名小站",
-                url: "https://www.btnull.org/"
+                name: "观影 GYING",
+                url: "https://www.gyg.la/"
             },
             {
                 name: "迅雷磁力",
