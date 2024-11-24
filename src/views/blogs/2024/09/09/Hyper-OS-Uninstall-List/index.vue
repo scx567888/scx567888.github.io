@@ -28,7 +28,10 @@
 .\adb.exe shell pm uninstall -k --user 0 com.xiaomi.aiasst.service
 自动连招
 .\adb.exe shell pm uninstall -k --user 0 com.xiaomi.macro
-
+CarWith
+.\adb.exe shell pm uninstall -k --user 0 com.miui.carlink
+Analytics
+.\adb.exe shell pm uninstall -k --user 0 com.miui.analytics
 坚决不能卸载 (会卡米)
 小米程序包管理器
             </textarea>
