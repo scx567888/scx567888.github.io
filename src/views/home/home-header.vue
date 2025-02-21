@@ -1,7 +1,7 @@
 <template>
     <div class="home-header">
         <div class="home-header-left">
-            <img alt="" src="/logos/scx.svg">
+            <img alt="" src="https://scx.cool/logos/scx.svg">
             欢迎来到 SCX
         </div>
         <div class="home-header-right">
