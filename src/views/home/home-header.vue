@@ -13,7 +13,7 @@
                 <router-link :to="{name:'software-download-link'}">常用软件下载地址</router-link>
             </div>
             <div class="home-header-right-item"><a href="/docs/index.html">文档</a></div>
-            <div class="home-header-right-item"><a href="/logos/index.html">Logos</a></div>
+            <div class="home-header-right-item"><a href="https://scx.cool/logos/">Logos</a></div>
         </div>
     </div>
 </template>
