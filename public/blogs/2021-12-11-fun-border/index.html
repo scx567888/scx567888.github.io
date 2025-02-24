@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <style>
+        .bg {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: black;
+            top: 0;
+            left: 0;
+            overflow: auto;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 10px;
+            row-gap: 10px;
+            flex-direction: row;
+            justify-content: left;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .test-div {
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: rgba(66, 185, 131, 0.71);
+        }
+
+
+    </style>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+<div id="bg" class="bg">
+
+</div>
+
+<script type="module">
+    import {addBorder} from "./index.js";
+    import {
+        findNearestElement
+    } from "./findNearestElement.js";
+
+    function getRandom(max, min = 0) {
+        return Math.random() * (max - min) + min;
+    }
+
+    let bgDiv = document.querySelector("#bg");
+
+    let allTestDiv = null;
+    let nowBorderElement = null;
+    window.onload = (e) => {
+        createRandomDiv();
+        allTestDiv = document.querySelectorAll(".test-div");
+        addBorder(allTestDiv, 400, (e1) => {
+            nowBorderElement = e1;
+        });
+        allTestDiv[0].click();
+    };
+
+    window.addEventListener("keydown", (e) => {
+        if (e.repeat) {
+            return;
+        }
+        if (e.code === "ArrowRight" || e.code === "ArrowLeft" || e.code === "ArrowUp" || e.code === "ArrowDown") {
+            e.preventDefault();
+            let sss = null;
+            if (e.code === "ArrowRight") {
+                sss = findNearestElement(nowBorderElement, allTestDiv, "right");
+            } else if (e.code === "ArrowLeft") {
+                sss = findNearestElement(nowBorderElement, allTestDiv, "left");
+            } else if (e.code === "ArrowUp") {
+                sss = findNearestElement(nowBorderElement, allTestDiv, "top");
+            } else if (e.code === "ArrowDown") {
+                sss = findNearestElement(nowBorderElement, allTestDiv, "bottom");
+            }
+            if (sss) {
+                sss.click();
+            }
+        }
+    });
+
+    function createRandomDiv() {
+        for (let i = 0; i < 999; i++) {
+            let d = document.createElement("div");
+            d.classList.add("test-div");
+            d.style.height = getRandom(100, 300) + "px";
+            d.style.width = getRandom(100, 300) + "px";
+            let h1 = document.createElement("h1");
+            h1.innerText = i + "";
+            d.appendChild(h1);
+            bgDiv.appendChild(d);
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="index.css" type="text/css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            background-color: #232222;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        }
+
+        .start {
+            position: absolute;
+            width: 1152px;
+            height: 648px;
+            background-color: #003c00;
+            box-sizing: border-box;
+            border: 4px solid #236623;
+            display: flex;
+            padding: 30px 30px 10px 80px;
+            box-shadow: -25px 25px 20px 0 rgba(35, 102, 35, 0.5);
+        }
+
+        #start-bg1, #start-bg2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .start-left {
+            width: 100%;
+            z-index: 1;
+            /* 透视需要加到父元素上 */
+            perspective: 200px;
+        }
+
+        .start-left-label {
+            font-size: 40px;
+            font-weight: lighter;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .start-left-main {
+            display: flex;
+            column-gap: 40px;
+            animation: turn-pages ease-out 400ms;
+            transform-origin: left bottom;
+        }
+
+        @keyframes turn-pages {
+            0% {
+                opacity: 0.2;
+                transform: rotateX(10deg) rotateY(10deg);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateX(0) rotateY(0);
+            }
+        }
+
+        .start-left-main-left {
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px;
+            grid-row-gap: 8px;
+            grid-column-gap: 8px;
+        }
+
+        .start-left-main-right {
+            display: grid;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px;
+            grid-row-gap: 8px;
+            grid-column-gap: 8px;
+        }
+
+        .start-right {
+            width: 100px;
+            height: 50px;
+            display: flex;
+            column-gap: 10px;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .start-right-label {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            color: white;
+        }
+
+        .start-right-label-top {
+            font-size: 23px;
+        }
+
+        .start-right-label-bottom {
+            font-size: 14px;
+        }
+
+        .start-right-avatar {
+            width: 40px;
+            height: 40px;
+            align-self: center;
+            background-color: red;
+        }
+
+        .start-right-avatar > img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .start-item {
+            transition: border ease-in-out 50ms;
+            cursor: pointer;
+        }
+
+        .start-item:hover {
+            border-color: white;
+            border-width: 2px;
+        }
+
+        .start-item-color1 {
+            background: linear-gradient(to bottom left, #02b5cb, #00839a);
+            border: 2px solid #02c7e0;
+        }
+
+        .start-item-color2 {
+            background: linear-gradient(to bottom left, #2f9401, #257300);
+            border: 2px solid #3db001;
+        }
+
+        .start-item-color3 {
+            background: linear-gradient(to bottom left, #8854ff, #613abd);
+            border: 2px solid #946fff;
+        }
+
+        .start-item-color4 {
+            background: linear-gradient(to bottom left, #42B983, #2f9b69);
+            border: 2px solid #4feba5
+        }
+
+        .start-item-color5 {
+            background: linear-gradient(to bottom left, #f6d629, #e1af01);
+            border: 2px solid #fff53d
+        }
+
+        .start-item-color6 {
+            background: linear-gradient(to bottom left, #aa00c9, #9100cd);
+            border: 2px solid #b944d8
+        }
+
+        .start-item-color7 {
+            background: linear-gradient(to bottom left, #ff6d45, #e04d1c);
+            border: 2px solid #fd7d60
+        }
+
+        .start-item-color8 {
+            background: linear-gradient(to bottom left, #e34975, #be1847);
+            border: 2px solid #ff638f
+        }
+
+        .start-item-color9 {
+            background: linear-gradient(to bottom left, #94cc53, #81bb3c);
+            border: 2px solid #b0ee65
+        }
+
+        .start-item-color10 {
+            background: linear-gradient(to bottom left, #ed64db, #b63ba7);
+            border: 2px solid #ff77ed;
+        }
+
+        .start-item-color11 {
+            background: linear-gradient(to bottom left, #3b86e9, #0257c2);
+            border: 2px solid #2183ff
+        }
+    </style>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <div id="start" class="start">
+        <canvas id="start-bg1"></canvas>
+        <canvas id="start-bg2"></canvas>
+        <div class="start-left">
+            <div class="start-left-label">Start</div>
+            <div class="start-left-main">
+                <div class="start-left-main-left">
+                    <!-- 第一行 -->
+                    <div class="start-item start-item-color1" style="grid-column-start: 1;grid-column-end: 3;"></div>
+                    <div class="start-item start-item-color2" style="grid-column-start: 3;grid-column-end: 5;"></div>
+                    <div class="start-item start-item-color3"></div>
+                    <div class="start-item start-item-color4"></div>
+                    <!-- 第二行 -->
+                    <div class="start-item start-item-color6" style="grid-column-start: 1;grid-column-end: 3;"></div>
+                    <div class="start-item start-item-color7" style="grid-column-start: 3;grid-column-end: 5;"></div>
+                    <div class="start-item start-item-color9"></div>
+                    <div class="start-item start-item-color11"></div>
+                    <!-- 第三行 -->
+                    <div class="start-item start-item-color4" style="grid-column-start: 1;grid-column-end: 3;"></div>
+                    <div class="start-item start-item-color5" style="grid-column-start: 3;grid-column-end: 5;"></div>
+                    <div class="start-item start-item-color8" style="grid-column-start: 5;grid-column-end: 7;"></div>
+                    <!-- 第四行 -->
+                    <div class="start-item start-item-color8" style="grid-column-start: 1;grid-column-end: 3;"></div>
+                    <div class="start-item start-item-color11" style="grid-column-start: 3;grid-column-end: 5"></div>
+                    <div class="start-item start-item-color7"></div>
+                    <div class="start-item start-item-color9"></div>
+                </div>
+                <div class="start-left-main-right">
+                    <div class="start-item start-item-color3" style="grid-column-start: 1;grid-column-end: 3;"></div>
+                    <div class="start-item start-item-color2" style="grid-column-start: 1;grid-column-end: 3;"></div>
+                    <div class="start-item start-item-color6"></div>
+                    <div class="start-item start-item-color1"></div>
+                    <div class="start-item start-item-color10" style="grid-column-start: 1;grid-column-end: 3;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="start-right">
+            <div class="start-right-label">
+                <div class="start-right-label-top">Tom</div>
+                <div class="start-right-label-bottom">Jerry</div>
+            </div>
+            <div class="start-right-avatar">
+                <img alt="Tom Jerry" src="avatar.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module">
+    import {addBorder} from "../2021-12-11-fun-border/index.js";
+    import {bg} from "./canvas-bg.js";
+    import {findNearestElement} from "../2021-12-11-fun-border/findNearestElement.js";
+
+    let allTestDiv = null;
+    let nowBorderElement = null;
+    window.onload = (e) => {
+        bg();
+        allTestDiv = document.querySelectorAll(".start-item");
+        addBorder(allTestDiv, 100, (e1) => {
+            nowBorderElement = e1;
+        });
+        setTimeout(() => allTestDiv[0].click(), 450);
+    };
+
+    window.addEventListener("keydown", (e) => {
+        if (e.repeat) {
+            return;
+        }
+        if (e.code === "ArrowRight" || e.code === "ArrowLeft" || e.code === "ArrowUp" || e.code === "ArrowDown") {
+            e.preventDefault();
+            let sss = null;
+            if (e.code === "ArrowRight") {
+                sss = findNearestElement(nowBorderElement, allTestDiv, "right");
+            } else if (e.code === "ArrowLeft") {
+                sss = findNearestElement(nowBorderElement, allTestDiv, "left");
+            } else if (e.code === "ArrowUp") {
+                sss = findNearestElement(nowBorderElement, allTestDiv, "top");
+            } else if (e.code === "ArrowDown") {
+                sss = findNearestElement(nowBorderElement, allTestDiv, "bottom");
+            }
+            if (sss) {
+                sss.click();
+            }
+        }
+    });
+
+</script>
+</body>
+</html>

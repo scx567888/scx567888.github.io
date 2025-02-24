@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout() 和 setInterval() 不准确</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="../core/normalize.css" rel="stylesheet">
+    <link href="../core/blog.css" rel="stylesheet">
+    <script type="module">
+        import {resizeAllIframe} from "../core/iframe-resizer/index.js";
+
+        window.addEventListener("load", () => resizeAllIframe());
+    </script>
+    <style>
+        iframe {
+            resize: unset;
+        }
+    </style>
+</head>
+<body>
+<div class="blog">
+    <div class="title">setTimeout() 和 setInterval() 不准确</div>
+    <div class="content">
+        <div>
+            <h2>1, 让我们制作一个往复的滑块动画 😊 !</h2>
+            <div>
+                <h3 style="color: #f14b79">1, 正常情况下,三种方式应该动画轨迹完全一致, 但是因为 setTimeout 并不准确导致动画轨迹有误
+                    🤔.</h3>
+                <iframe src="a1.html"></iframe>
+                <ul>
+                    <li>这里 CSS方式 的速度起码还是正常的, 但是 CSS方式 一般只适用于一些简单情况.</li>
+                </ul>
+            </div>
+            <h2>2, 原因 ?</h2>
+            <ul>
+                <li>看这里 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/setTimeout#备注">https://developer.mozilla.org/zh-CN/docs/Web/API/setTimeout#备注</a>
+                </li>
+            </ul>
+            <h2>3, 如何解决 ?</h2>
+            <div>
+                <h3 style="color: #f14b79">试了好多种方式都不尽人意, 只能说暂时无解 🥺.</h3>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

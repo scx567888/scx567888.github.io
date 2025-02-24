@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 32px;
+        }
+
+        input {
+            height: 32px;
+            width: 32px;
+        }
+
+        div {
+            font-size: 64px;
+            width: fit-content;
+            position: absolute;
+        }
+
+        #dog2 {
+            left: 256px;
+        }
+
+        #dog3 {
+            left: 512px;
+        }
+
+        #dog1, #dog3 {
+            opacity: 0.5;
+        }
+
+        div {
+            position: absolute;
+            animation-name: spin;
+            animation-delay: 0s;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform-origin: 100% 100%;
+        }
+
+        #slowmo:checked ~ #dog2,
+        #dog3 {
+            animation-duration: 5s;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<input id="slowmo" type="checkbox"/>
+<label for="slowmo">Slowmo!</label>
+<div id="dog1">🐶</div>
+<div id="dog2">🐶</div>
+<div id="dog3">🐶</div>
+<script>
+
+
+</script>
+</body>
+</html>
