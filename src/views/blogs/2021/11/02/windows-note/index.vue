@@ -9,9 +9,6 @@
 关闭 Windows 10 保留空间
 	DISM.exe /Online /Set-ReservedStorageState /State:Disabled
 
-台式机调节亮度
-	https://github.com/emoacht/Monitorian/releases/tag/2.6.0-Executables
-
 清理 Windows 更新
 	DISM.exe /Online /Cleanup-Image /StartComponentCleanup /ResetBase
 
