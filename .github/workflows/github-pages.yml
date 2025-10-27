@@ -36,7 +36,7 @@ jobs:
         run: npm run build
 
       - name: 上传 构建和测试 生成的文件
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: scx567888-artifact
           path: "./dist/"
