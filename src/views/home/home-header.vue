@@ -1,8 +1,7 @@
 <template>
     <div class="home-header">
         <div class="home-header-left">
-            <img alt="" src="https://scx.cool/scx-logo/scx.svg">
-            欢迎来到 SCX
+            欢迎来到 scx567888
         </div>
         <div class="home-header-right">
             <div class="home-header-right-item active"><a href="./">博客</a></div>
@@ -12,8 +11,6 @@
             <div class="home-header-right-item">
                 <router-link :to="{name:'software-download-link'}">常用软件下载地址</router-link>
             </div>
-            <div class="home-header-right-item"><a href="/docs/index.html">文档</a></div>
-            <div class="home-header-right-item"><a href="https://scx.cool/scx-logo/">Logos</a></div>
         </div>
     </div>
 </template>
