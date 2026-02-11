@@ -272,7 +272,7 @@ function getRouteTitle(route) {
 
 function getPageTitle(route) {
     const title = getRouteTitle(route);
-    return title == null ? "Scx WebSite" : title + " - Scx WebSite";
+    return title == null ? "Scx WebSite" : title + " - scx567888 WebSite";
 }
 
 export {routes, setRoutesOrder, getPageTitle, getRouteTitle};
