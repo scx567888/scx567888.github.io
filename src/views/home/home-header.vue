@@ -1,8 +1,7 @@
 <template>
     <div class="home-header">
         <div class="home-header-left">
-            <img alt="" src="https://scx.cool/scx-logo/scx.svg">
-            欢迎来到 SCX
+            欢迎来到 scx567888
         </div>
         <div class="home-header-right">
             <div class="home-header-right-item active"><a href="./">博客</a></div>

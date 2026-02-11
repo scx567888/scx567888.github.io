@@ -6,10 +6,10 @@
 
         <template #content>
             <h2>猫咪</h2>
-            <img src="https://scx.cool/images/Kitten.jpg" style="width: 100%">
+            <img src="https://scx567888.com/images/Kitten.jpg" style="width: 100%">
             <ul>
                 <li>
-                    <a download href="https://scx.cool/images/Kitten.jpg">JPEG 下载</a>
+                    <a download href="https://scx567888.com/images/Kitten.jpg">JPEG 下载</a>
                     MD5 : 9DE1F18760593545768FDE44A1AB78CA
                 </li>
                 <li>
@@ -19,10 +19,10 @@
             </ul>
 
             <h2>皮卡丘</h2>
-            <img src="https://scx.cool/images/Pikachu.png" style="width: 100%">
+            <img src="https://scx567888.com/images/Pikachu.png" style="width: 100%">
             <ul>
                 <li>
-                    <a download href="https://scx.cool/images/Pikachu.png">PNG 下载</a>
+                    <a download href="https://scx567888.com/images/Pikachu.png">PNG 下载</a>
                     MD5 : 9A7BA23F62D913CC4E0C8E590B50995C
                 </li>
                 <li>
