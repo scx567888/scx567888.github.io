@@ -2,4 +2,4 @@
     <img src="https://scx.cool/scx-logo/scx.svg" width="300px"  alt="scx"/>
 </p>
 
-## [scx.cool](https://scx.cool)
+## [scx567888.com](https://scx567888.com/)
