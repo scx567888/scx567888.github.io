@@ -1,7 +1,7 @@
 <template>
     <div style="padding: 20px">
         <h3>IDEA 插件列表 (适用于 2025.3) 共 40 个</h3>
-        <textarea style="width: 80%;height: 200px;border: 1px solid red">
+        <textarea style="width: 80%;height: 600px;border: 1px solid red">
 classic-ui
 completionMlRanking
 css-plugin
