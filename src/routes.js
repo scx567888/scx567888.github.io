@@ -15,6 +15,29 @@ const routes = [
         },
         children: [
             {
+                path: "2026",
+                children: [
+                    {
+                        path: "02",
+                        children: [
+                            {
+                                path: "23",
+                                children: [
+                                    {
+                                        path: "2026-02-23-idea-plugin",
+                                        name: "2026-02-23-idea-plugin",
+                                        component: () => import("./views/blogs/2026/02/23/idea-plugin/index.vue"),
+                                        meta: {
+                                            title: "2026-02-23 IDEA 插件列表 (适用于 2025.3) 共 40 个",
+                                        },
+                                    },
+                                ],
+                            },
+                        ],
+                    } 
+                ]
+            },
+            {
                 path: "2024",
                 children: [{
                     path: "09",
