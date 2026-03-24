@@ -54,7 +54,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: 下载工件
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: scx567888-artifact
           path: "./dist/"
