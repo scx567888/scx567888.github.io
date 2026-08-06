@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button,
+        body {
+            font-size: 32px;
+        }
+
+        input {
+            height: 32px;
+            width: 32px;
+        }
+
+        div {
+            font-size: 64px;
+            width: fit-content;
+        }
+
+        .dog {
+            animation-name: spin;
+            animation-delay: 0s;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            animation-play-state: paused;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<button id="btn">点击播放动画</button>
+<div class="dog">🐶</div>
+<script>
+    const btn = document.querySelector("#btn");
+    const dog = document.querySelector(".dog");
+    const dogAnimations = dog.getAnimations().find(c => c.animationName === "spin");
+
+    btn.addEventListener("click", (e) => dogAnimations.play());
+
+</script>
+</body>
+</html>

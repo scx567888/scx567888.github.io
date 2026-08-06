@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>纯 CSS 实现轮播效果</title>
+    <link href="../../../normalize.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+<div class="css-carousel">
+    <div class="carousel-wrapper">
+        <div class="carousel-reverse">
+            <div class="carousel-half">
+                <div class="carousel-item">
+                    <div class="card1"><h1>1</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card2"><h1>2</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card3"><h1>3</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card4"><h1>4</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card5"><h1>5</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card6"><h1>6</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card7"><h1>7</h1></div>
+                </div>
+            </div>
+            <div class="carousel-half">
+                <div class="carousel-item">
+                    <div class="card1"><h1>1</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card2"><h1>2</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card3"><h1>3</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card4"><h1>4</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card5"><h1>5</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card6"><h1>6</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card7"><h1>7</h1></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-wrapper">
+        <div class="carousel">
+            <div class="carousel-half">
+                <div class="carousel-item">
+                    <div class="card1"><h1>1</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card2"><h1>2</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card3"><h1>3</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card4"><h1>4</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card5"><h1>5</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card6"><h1>6</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card7"><h1>7</h1></div>
+                </div>
+            </div>
+            <div class="carousel-half">
+                <div class="carousel-item">
+                    <div class="card1"><h1>1</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card2"><h1>2</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card3"><h1>3</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card4"><h1>4</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card5"><h1>5</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card6"><h1>6</h1></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card7"><h1>7</h1></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let cssCarousel = document.querySelector(".css-carousel");
+    let carouselWrapperList = document.querySelectorAll(".carousel-wrapper");
+
+    for (let i = 0; i < 9; i++) {
+        cssCarousel.appendChild(carouselWrapperList[0].cloneNode(true));
+        cssCarousel.appendChild(carouselWrapperList[1].cloneNode(true));
+    }
+
+    let carouselList = [...document.querySelectorAll(".carousel"), ...document.querySelectorAll(".carousel-reverse")];
+    for (let valueElement of carouselList) {
+        valueElement.addEventListener("click", () => changeClass(valueElement));
+    }
+
+    function changeClass(o) {
+        if (o.classList.contains("active")) {
+            o.classList.remove("active");
+        } else {
+            o.classList.add("active");
+        }
+    }
+</script>
+</body>
+</html>

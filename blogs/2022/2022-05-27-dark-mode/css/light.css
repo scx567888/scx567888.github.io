@@ -1,0 +1,8 @@
+/*不设置或显式设置为 light 的时候使用 亮色*/
+:root,
+:root[theme="light"] {
+    color-scheme: light;
+    --scx-app_theme: rgb(24, 144, 255);
+    --scx-app_bg: #f2f2f2;
+    --scx-app_color: #333333;
+}

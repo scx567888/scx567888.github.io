@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 32px;
+        }
+
+        input {
+            height: 32px;
+            width: 32px;
+        }
+
+        div {
+            font-size: 32px;
+            width: fit-content;
+        }
+
+        div {
+            --duration: 1s;
+            --delay: calc(-0.2 * var(--duration) * var(--num));
+            position: absolute;
+            animation-name: move1, move2, move3, opacity;
+            animation-delay: var(--delay);
+            animation-duration: var(--duration);
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform-origin: 100% 100%;
+            z-index: 0;
+        }
+
+        @keyframes move1 {
+            from {
+                transform: translate3d(50px, 100px, 0);
+                z-index: 0;
+            }
+            to {
+                transform: translate3d(330px, -550px, 0);
+                z-index: 1000;
+            }
+        }
+
+        @keyframes move2 {
+            to {
+                transform: translate3d(390px, 550px, 0);
+            }
+        }
+
+        @keyframes move3 {
+            to {
+                transform: translate3d(30px, 50px, 0);
+            }
+        }
+
+        @keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<input id="slowmo" type="checkbox"/>
+<label for="slowmo">Slowmo!</label>
+<div style="--num:0;">🐶</div>
+<div style="--num:1;">🐶</div>
+<div style="--num:2;">🐶</div>
+<div style="--num:3;">🐶</div>
+<div style="--num:4;">🐶</div>
+<script>
+    const divs = document.querySelectorAll("div");
+    const slowmo = document.querySelector("input");
+    const normalDurationSecond = 1;
+    const slowmoDurationSecond = 4;
+    const animationNames = "move1, move2, move3, opacity";
+
+    slowmo.addEventListener("change", (e) => {
+        for (const div of divs) {
+            const progress = parseInt(window.getComputedStyle(div).getPropertyValue("z-index")) / 1000;
+            let duration = 0;
+            if (slowmo.checked) {
+                duration = slowmoDurationSecond;
+            } else {
+                duration = normalDurationSecond;
+            }
+            div.style.setProperty("--duration", duration.toString() + "s");
+            div.style.setProperty("--delay", (-1 * duration * progress).toString() + "s");
+            // resetting playback time, by removing the animation and adding it back.
+            div.style.setProperty("animation-name", "none");
+            setTimeout(() => {
+                div.style.setProperty("animation-name", animationNames);
+            }, 0);
+        }
+    });
+</script>
+</body>
+</html>

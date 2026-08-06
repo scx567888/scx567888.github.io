@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 32px;
+        }
+
+        input {
+            height: 32px;
+            width: 32px;
+        }
+
+        div {
+            font-size: 64px;
+            width: fit-content;
+        }
+
+        :checked ~ div {
+            animation-name: spin;
+            animation-delay: 0s;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<input id="spin1" type="checkbox"/>
+<label for="spin1">Spin!</label>
+<input id="spin2" type="checkbox"/>
+<label for="spin2">Spin again!</label>
+<div>🐶</div>
+</body>
+</html>

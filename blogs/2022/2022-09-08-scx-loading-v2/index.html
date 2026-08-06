@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="SCX LOADING" name="description"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="./scx-loading.js" type="module"></script>
+    <link href="../../../normalize.css" rel="stylesheet">
+    <title>SCX LOADING</title>
+</head>
+<body>
+<div id="app">
+    <scx-loading></scx-loading>
+</div>
+
+<script>
+    let app = document.querySelector("#app");
+    setTimeout(() => {
+        app.innerHTML = "<h1>加载完成 !!!</h1>"
+    }, 1000);
+</script>
+</body>
+</html>

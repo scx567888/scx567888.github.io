@@ -1,0 +1,8 @@
+.has-border {
+    border-radius: 12px;
+    /* 可以用阴影*/
+    box-shadow: 0 0 3px 5px #09fe01;
+    /* 也可以用 border */
+    /*border: 5px solid cornflowerblue;*/
+    /*box-sizing: border-box;*/
+}

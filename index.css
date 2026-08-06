@@ -1,0 +1,159 @@
+/****************** home ******************/
+
+.home {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", serif;
+    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+    .home {
+        font-size: 15px;
+    }
+}
+
+
+/****************** home-header ******************/
+
+.home-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 90%);
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px 0 rgba(50, 50, 50, 0.5);
+    font-size: 1.25em;
+}
+
+.home-header-left {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.home-header-left > img {
+    height: 70%;
+}
+
+.home-header-right {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-header-right-item {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: background-color 200ms;
+    cursor: pointer;
+}
+
+.home-header-right-item.active,
+.home-header-right-item:hover {
+    background-color: rgba(45, 45, 45, 0.2);
+}
+
+.home-header-right-item.active {
+    box-shadow: inset 0 0 3px 0 rgba(45, 45, 45, 0.4);
+}
+
+
+@media (max-width: 900px) {
+
+    .home-header {
+        font-size: 1em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    .home-header-left {
+        gap: 5px;
+    }
+
+    .home-header-right-item {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+}
+
+/****************** home-content ******************/
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(100, 100, 100, 0.2);
+    box-shadow: 1px 2px 5px 0 rgba(50, 50, 50, 0.2);
+}
+
+.home-content-item {
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+    align-items: start;
+    transition: background-color 200ms;
+}
+
+.home-content-item:hover {
+    background-color: rgba(242, 242, 242, 0.5);
+}
+
+.home-content-item:last-child {
+    border-bottom: unset;
+}
+
+
+@media (max-width: 900px) {
+
+    .home-content {
+        width: 92%;
+    }
+}
+
+
+/****************** home-footer ******************/
+
+.home-footer {
+    position: absolute;
+    opacity: 0;
+    bottom: 5px;
+    right: 5px;
+    transform: scale(0.8);
+    transition: all 300ms;
+}
+
+.home-footer:hover {
+    opacity: 1;
+    transform: scale(1);
+}
